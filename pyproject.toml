@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cite-check"
+version = "0.1.0"
+description = "Claim <-> citation entailment verifier: audit whether RAG citations actually support their claims"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Habib Ur Rehman" }]
+keywords = ["rag", "citation", "faithfulness", "entailment", "nlp", "hallucination"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+cite-check = "citecheck.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/habib-analyst/cite-check"
+Repository = "https://github.com/habib-analyst/cite-check"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["citecheck*"]

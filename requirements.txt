@@ -1,0 +1,3 @@
+# cite-check is stdlib-only at runtime: no dependencies to install.
+# The line below is needed only to run the test suite.
+pytest>=7
